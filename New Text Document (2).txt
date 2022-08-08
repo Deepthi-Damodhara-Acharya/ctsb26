@@ -1,0 +1,26 @@
+D:\Java\kafka_2.13-2.8.0>.\bin\windows\zookeeper-server-start.bat .\config\zookeeper.properties
+.\bin\windows\kafka-server-start.bat .\config\server.properties
+
+
+to check List of kafka topics:
+------------------------------
+.\bin\windows\kafka-topics.bat --list --zookeeper localhost:2181
+
+
+To create topic
+---------------
+.\bin\windows\kafka-topics.bat --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic kafka_topic
+.\bin\windows\kafka-topics.bat --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic kafka_topic1
+
+
+Produce 
+----------
+D:\Java\kafka_2.13-2.8.0\bin\windows> .\kafka-console-producer.bat --broker-list localhost:9092 --topic kafka_topic1
+
+Consume
+---------------
+D:\Java\kafka_2.13-2.8.0\bin\windows> .\kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic kafka_topic1 --from-beginning
+
+
+.\kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic kafka_topic
+.\kafka-console-producer.bat --bootstrap-server localhost:9092 --topic kafka_topic

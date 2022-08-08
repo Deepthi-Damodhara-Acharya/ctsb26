@@ -1,0 +1,7 @@
+ctstraining
+
+
+If the port is already in use, 
+Steps to kill process running on port 8080 in Windows,
+1.netstat -ano | findstr < Port Number >
+2.taskkill /F /PID < Process Id >
