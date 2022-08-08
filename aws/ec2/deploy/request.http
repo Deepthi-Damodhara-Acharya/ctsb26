@@ -1,0 +1,58 @@
+GET http://ec2-54-157-9-58.compute-1.amazonaws.com:8080/books
+###
+GET http://54.157.9.58:8080/books
+
+###
+GET http://54.157.9.58:8080/books/2
+###
+POST http://54.157.9.58:8080/books
+content-type: application/json
+
+{
+    "title": "Ariel",
+    "author": "Swimmer",
+    "price": 14.9
+  }
+###
+## HTTP API Gateway Starts ##
+###
+GET https://3rkfrye1y4.execute-api.us-east-1.amazonaws.com/ourbooks
+###
+GET https://3rkfrye1y4.execute-api.us-east-1.amazonaws.com/ourbooks/6
+###
+POST https://3rkfrye1y4.execute-api.us-east-1.amazonaws.com/ourbooks
+content-type: application/json
+
+{
+  "title": "Ariel",
+  "author": "Swimmer",
+  "price": 14.9
+}
+###
+## HTTP API Gateway Ends ##
+###
+
+
+
+
+
+
+###
+## REST API Gateway Starts ##
+###
+GET https://h47mx89xqi.execute-api.us-east-1.amazonaws.com/dev/pdfs
+###
+GET https://h47mx89xqi.execute-api.us-east-1.amazonaws.com/dev/pdfs/10
+###
+POST https://h47mx89xqi.execute-api.us-east-1.amazonaws.com/dev/pdfs
+content-type: application/json
+
+{
+  "title": "all books are great",
+  "author": "someone",
+  "publisher": "Sun publication",
+  "price": 74.9
+}
+###
+## REST API Gateway Ends ##
+###

@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Book",
+  "type": "object",
+  "properties": {
+    "id": { "type": "integer" },
+    "title": { "type": "string" },
+    "author": { "type": "string" },
+    "publisher": { 
+    	"type": "string", 
+    	"enum": ["Moon publication", "Sun publication"]
+    },
+    "price": { "type": "integer" }
+  },
+  "required": [ "title", "price" ]
+}
